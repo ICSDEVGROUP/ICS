@@ -13,7 +13,15 @@ function calculateTotal() {
     let salesTax = subtotal * salesTaxRate;
     let grandTotal = subtotal + salesTax;
 
-    document.getElementById("subtotal").innerText = subtotal.toFixed(2);
-    document.getElementById("salesTax").innerText = salesTax.toFixed(2);
-    document.getElementById("grandTotal").innerText = grandTotal.toFixed(2);
+    // Format numbers with commas
+    let formatter = new Intl.NumberFormat('en-US', {
+        style: 'decimal',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
+
+    document.getElementById("subtotal").innerText = formatter.format(subtotal);
+    document.getElementById("salesTax").innerText = formatter.format(salesTax);
+    document.getElementById("grandTotal").innerText = formatter.format(grandTotal);
 }
+
