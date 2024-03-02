@@ -1,16 +1,59 @@
 /* style.css */
+/* Resetting margin and padding for body and html to remove default spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensuring that the html and body take up the full viewport height */
+    width: 100%; /* Ensuring that the html and body take up the full viewport width */
+}
+
+/* Styling for the calculator's container to make it full height */
 #calculatorForm {
-    height: 1500px;
-    width: 350px;
+    height: 100%; /* Make the calculator stretch to the full height of its parent */
+    display: flex;
+    flex-direction: column; /* Organizes children of the calculator vertically */
+    justify-content: center; /* Centers the content vertically in case it doesn't fill the whole height */
+    align-items: center; /* Centers the content horizontally */
+    overflow: auto; /* Adds scroll to the calculator form if the content overflows the viewport height */
     padding: 20px;
-    border: 1px solid #000000;
+    box-sizing: border-box; /* Ensures padding does not add to the total width/height */
+}
+
+/* Additional styles for internal elements for better appearance */
+#calculatorForm div, #totals {
+    width: 100%; /* Makes each section use the full width available */
+    max-width: 600px; /* Ensures form doesn't stretch too wide on larger screens */
+    margin: 5px 0; /* Adds a little space between form elements */
+}
+
+/* Styling form elements for better usability and appearance */
+#calculatorForm label, #calculatorForm input, #calculatorForm button {
+    display: block; /* Makes each form element take its own line */
+    width: 100%;
+    margin: 5px 0; /* Adds some space between elements */
+}
+
+#calculatorForm button {
+    cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+    padding: 10px;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-#calculatorForm div {
-    margin-bottom: 10px;
+/* Ensuring input fields are easily interactable */
+#calculatorForm input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px; /* Adds space between the label and input field */
 }
 
+/* Specific styles for displaying the totals */
 #totals p {
-    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
+
