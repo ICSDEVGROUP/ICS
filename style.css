@@ -1,0 +1,15 @@
+/* style.css */
+#calculatorForm {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#calculatorForm div {
+    margin-bottom: 10px;
+}
+
+#totals p {
+    margin: 5px 0;
+}
