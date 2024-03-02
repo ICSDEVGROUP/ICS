@@ -17,6 +17,7 @@ html, body {
     overflow: auto; /* Adds scroll to the calculator form if the content overflows the viewport height */
     padding: 20px;
     box-sizing: border-box; /* Ensures padding does not add to the total width/height */
+    color: black; /* Makes all text within the calculatorForm black */
 }
 
 /* Additional styles for internal elements for better appearance */
@@ -31,13 +32,14 @@ html, body {
     display: block; /* Makes each form element take its own line */
     width: 100%;
     margin: 5px 0; /* Adds some space between elements */
+    color: black; /* Ensures text in inputs and buttons is also black */
 }
 
 #calculatorForm button {
     cursor: pointer; /* Changes cursor to pointer when hovering over the button */
     padding: 10px;
     background-color: #007bff; /* Example button color */
-    color: white;
+    color: white; /* Makes button text white for contrast */
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -49,11 +51,12 @@ html, body {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 5px; /* Adds space between the label and input field */
+    color: black; /* Makes text color in inputs black */
 }
 
 /* Specific styles for displaying the totals */
 #totals p {
     font-size: 16px;
     line-height: 1.5;
+    color: black; /* Ensures totals text is black */
 }
-
