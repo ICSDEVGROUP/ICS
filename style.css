@@ -1,5 +1,6 @@
 /* style.css */
 #calculatorForm {
+    height: 1500px;
     width: 350px;
     padding: 20px;
     border: 1px solid #000000;
