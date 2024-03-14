@@ -1,9 +1,9 @@
 // script.js
 function calculateTotal() {
-    const item1Price = 45;
-    const item2Price = 32;
-    const item3Price = 20;
-    const item4Price = 15;
+    const item1Price = 48;
+    const item2Price = 35;
+    const item3Price = 23;
+    const item4Price = 18;
     const item5Price = 14;
     const item6Price = 18;
     const item7Price = 28;
