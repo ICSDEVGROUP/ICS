@@ -51,7 +51,7 @@ function calculateTotal() {
 
     // Calculate 20% gratuity
     let gratuity = subtotal * 0.20;
-    let salesTax = subtotal + gratuity * salesTaxRate;
+    let salesTax = (subtotal + gratuity) * salesTaxRate;
     let grandTotal = subtotal + gratuity + salesTax;
 
     document.getElementById("subtotal").innerText = subtotal.toFixed(2);
