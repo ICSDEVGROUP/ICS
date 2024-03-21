@@ -47,13 +47,16 @@ function calculateTotal() {
     let item21Quantity = document.getElementById("item21Quantity").value;
     let item22Quantity = document.getElementById("item22Quantity").value;
 
-    let subtotal = (item1Price * item1Quantity) + (item2Price * item2Quantity) + (item3Price * item3Quantity) + (item4Price * item4Quantity) + (item5Price * item5Quantity) + (item6Price * item6Quantity) + (item7Price * item7Quantity) + (item8Price * item8Quantity) + (item9Price * item9Quantity) + (item10Price * item10Quantity) + (item11Price * item11Quantity) + (item12Price * item12Quantity) + (item13Price * item13Quantity) + (item14Price * item14Quantity) + (item15Price * item15Quantity) + (item16Price * item16Quantity) + (item17Price * item17Quantity) + (item18Price * item18Quantity) + (item19Price * item19Quantity) + (item20Price * item20Quantity) + (item21Price * item21Quantity) + (item22Price * item22Quantity);
+ let subtotal = (item1Price * item1Quantity) + (item2Price * item2Quantity) + (item3Price * item3Quantity) + (item4Price * item4Quantity) + (item5Price * item5Quantity) + (item6Price * item6Quantity) + (item7Price * item7Quantity) + (item8Price * item8Quantity) + (item9Price * item9Quantity) + (item10Price * item10Quantity) + (item11Price * item11Quantity) + (item12Price * item12Quantity) + (item13Price * item13Quantity) + (item14Price * item14Quantity) + (item15Price * item15Quantity) + (item16Price * item16Quantity) + (item17Price * item17Quantity) + (item18Price * item18Quantity) + (item19Price * item19Quantity) + (item20Price * item20Quantity) + (item21Price * item21Quantity) + (item22Price * item22Quantity);
 
-    // Calculate 20% gratuity
+// Calculate sales tax based on the subtotal
+let salesTax = subtotal * salesTaxRate;
 
-    let salesTax = subtotal * salesTaxRate;
-    let gratuity = (subtotal + salesTax) * 0.20;
-    let grandTotal = subtotal + gratuity + salesTax;
+// Calculate gratuity based on the subtotal plus sales tax
+let gratuity = (subtotal + salesTax) * 0.20;
+
+// Calculate grand total
+let grandTotal = subtotal + salesTax + gratuity;
 
     document.getElementById("subtotal").innerText = subtotal.toFixed(2);
     document.getElementById("gratuity").innerText = gratuity.toFixed(2);
